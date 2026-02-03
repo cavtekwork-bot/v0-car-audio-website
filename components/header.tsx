@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, Volume2, Car } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
@@ -22,12 +22,15 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative w-11 h-11 bg-primary rounded-lg flex items-center justify-center shadow-lg shadow-primary/30">
-              <Car className="w-5 h-5 text-primary-foreground absolute -top-0.5 -left-0.5 opacity-60" />
-              <Volume2 className="w-6 h-6 text-primary-foreground" />
-            </div>
+            <svg 
+              viewBox="0 0 60 24" 
+              className="w-14 h-6 text-primary"
+              fill="currentColor"
+            >
+              <path d="M2 16c0 0 3-1 6-1s8 2 14 2c4 0 8-1 12-2s10-2 14-2c3 0 6 0.5 8 1l2 1v2c0 1-1 2-3 2.5s-5 0.5-8 0.5c-4 0-10-0.5-14-0.5s-8 0.5-12 0.5-7-0.5-10-1c-2-0.4-3-1-4-2l-1-1.5v-1.5z M8 14c1-3 3-5 6-6s7-1 11-1c5 0 10 1 14 2s7 3 9 5l-2 0.5c-2-2-4-3-7-4s-8-1.5-13-1.5c-4 0-8 0.5-11 1.5s-5 2-6 4l-1-0.5z M52 12.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z M10 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+            </svg>
             <div className="hidden sm:block">
-              <span className="font-serif font-bold text-2xl tracking-wide text-foreground bg-gradient-to-r from-foreground to-primary bg-clip-text">FORDHAM</span>
+              <span className="font-serif font-bold text-2xl tracking-wide text-foreground">FORDHAM</span>
               <span className="block text-[10px] tracking-[0.25em] text-primary uppercase font-semibold">Auto & Security</span>
             </div>
           </Link>
