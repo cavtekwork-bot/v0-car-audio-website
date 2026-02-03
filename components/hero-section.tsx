@@ -84,7 +84,7 @@ export function HeroSection() {
               <div className="bg-primary/10 border border-primary/30 rounded-lg p-6">
                 <p className="text-sm font-medium text-primary mb-2">Free Consultation</p>
                 <p className="font-serif text-2xl font-bold text-foreground">Call Today!</p>
-                <p className="text-primary font-semibold mt-2">(555) 123-4567</p>
+                <p className="text-primary font-semibold mt-2">(718) 555-1234</p>
               </div>
             </div>
           </div>

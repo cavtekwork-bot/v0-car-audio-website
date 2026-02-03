@@ -7,7 +7,7 @@ const testimonials = [
     name: "Marcus Johnson",
     vehicle: "2023 Ford F-150",
     rating: 5,
-    text: "The team at Apex completely transformed my truck's sound system. The bass is incredible and the install is flawless. Highly recommend!",
+    text: "The team at Fordham Auto completely transformed my truck's sound system. The bass is incredible and the install is flawless. Highly recommend!",
   },
   {
     name: "Sarah Chen",
