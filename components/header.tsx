@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, Phone, Volume2, Car } from "lucide-react"
+import { Menu, X, Volume2, Car } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
@@ -46,11 +46,7 @@ export function Header() {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center gap-4">
-            <a href="tel:+17185551234" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-              <Phone className="w-4 h-4" />
-              (718) 555-1234
-            </a>
+          <div className="hidden md:flex items-center">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
               Book Appointment
             </Button>
@@ -81,11 +77,7 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4 border-t border-border space-y-3">
-              <a href="tel:+17185551234" className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Phone className="w-4 h-4" />
-                (718) 555-1234
-              </a>
+            <div className="pt-4 border-t border-border">
               <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                 Book Appointment
               </Button>
