@@ -106,7 +106,7 @@ export function SpecialsSlider() {
         <CarouselContent className="ml-0">
           {specials.map((special) => (
             <CarouselItem key={special.id} className="pl-0 basis-full">
-              <div className="relative w-full aspect-[21/9] md:aspect-[3/1] lg:aspect-[4/1]">
+              <div className="relative w-full aspect-[16/9] md:aspect-[21/9] lg:aspect-[3/1]">
                 {/* Background Image */}
                 <Image
                   src={special.image || "/placeholder.svg"}
