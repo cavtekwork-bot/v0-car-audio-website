@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <SpecialsSlider />
       <HeroSection />
+      <SpecialsSlider />
       <ServicesSection />
       <ProductsSection />
       <GallerySection />
