@@ -94,7 +94,7 @@ export function SpecialsSlider() {
   }, [api])
 
   return (
-    <section className="relative w-full bg-secondary">
+    <section className="relative w-full bg-secondary pt-16 md:pt-20">
       <Carousel
         setApi={setApi}
         opts={{
