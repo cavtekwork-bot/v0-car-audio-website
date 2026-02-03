@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Instagram, Youtube } from "lucide-react"
+import { Facebook, Instagram, Youtube, Volume2, Car } from "lucide-react"
 
 export function Footer() {
   return (
@@ -8,13 +8,14 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded flex items-center justify-center">
-                <span className="text-primary-foreground font-serif font-bold text-lg">F</span>
+            <Link href="/" className="flex items-center gap-3 mb-4">
+              <div className="relative w-11 h-11 bg-primary rounded-lg flex items-center justify-center shadow-lg shadow-primary/30">
+                <Car className="w-5 h-5 text-primary-foreground absolute -top-0.5 -left-0.5 opacity-60" />
+                <Volume2 className="w-6 h-6 text-primary-foreground" />
               </div>
               <div>
-                <span className="font-serif font-bold text-xl tracking-tight text-foreground">FORDHAM</span>
-                <span className="block text-[10px] tracking-[0.2em] text-muted-foreground uppercase -mt-1">Auto & Security</span>
+                <span className="font-serif font-bold text-2xl tracking-wide text-foreground bg-gradient-to-r from-foreground to-primary bg-clip-text">FORDHAM</span>
+                <span className="block text-[10px] tracking-[0.25em] text-primary uppercase font-semibold">Auto & Security</span>
               </div>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">

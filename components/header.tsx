@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, Phone } from "lucide-react"
+import { Menu, X, Phone, Volume2, Car } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
@@ -21,13 +21,14 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded flex items-center justify-center">
-              <span className="text-primary-foreground font-serif font-bold text-lg">F</span>
+          <Link href="/" className="flex items-center gap-3">
+            <div className="relative w-11 h-11 bg-primary rounded-lg flex items-center justify-center shadow-lg shadow-primary/30">
+              <Car className="w-5 h-5 text-primary-foreground absolute -top-0.5 -left-0.5 opacity-60" />
+              <Volume2 className="w-6 h-6 text-primary-foreground" />
             </div>
             <div className="hidden sm:block">
-              <span className="font-serif font-bold text-xl tracking-tight text-foreground">FORDHAM</span>
-              <span className="block text-[10px] tracking-[0.2em] text-muted-foreground uppercase -mt-1">Auto & Security</span>
+              <span className="font-serif font-bold text-2xl tracking-wide text-foreground bg-gradient-to-r from-foreground to-primary bg-clip-text">FORDHAM</span>
+              <span className="block text-[10px] tracking-[0.25em] text-primary uppercase font-semibold">Auto & Security</span>
             </div>
           </Link>
 
