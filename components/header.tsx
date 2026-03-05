@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Car } from "lucide-react"
 
 const navLinks = [
   { name: "Services", href: "#services" },
@@ -15,18 +15,15 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-orange-500/30">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <div className="flex flex-col">
-              <span className="text-xl md:text-2xl font-black tracking-tight bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent drop-shadow-lg" style={{textShadow: '0 0 30px rgba(249,115,22,0.5)'}}>
-                TOP NOTCH
-              </span>
-              <span className="text-[10px] md:text-xs font-bold tracking-[0.15em] text-orange-400 uppercase">
-                Auto Audio & Security
-              </span>
+          <Link href="/" className="flex items-center gap-3">
+            <Car className="w-10 h-10 text-primary" />
+            <div className="hidden sm:block">
+              <span className="font-serif font-bold text-xl tracking-wide text-foreground">TOP NOTCH</span>
+              <span className="block text-[10px] tracking-[0.2em] text-primary uppercase font-semibold">Auto Audio & Security</span>
             </div>
           </Link>
 
@@ -45,7 +42,7 @@ export function Header() {
 
           {/* Phone Number */}
           <div className="hidden md:flex items-center">
-            <a href="tel:7183645070" className="text-sm font-bold text-orange-400 hover:text-orange-300 transition-colors">
+            <a href="tel:7183645070" className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
               (718) 364-5070
             </a>
           </div>
@@ -63,7 +60,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-black border-t border-orange-500/20">
+        <div className="md:hidden bg-background border-t border-border">
           <nav className="px-4 py-4 space-y-4">
             {navLinks.map((link) => (
               <Link
@@ -75,8 +72,8 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4 border-t border-orange-500/30">
-              <a href="tel:7183645070" className="block w-full text-center py-2 text-lg font-bold text-orange-400">
+            <div className="pt-4 border-t border-border">
+              <a href="tel:7183645070" className="block w-full text-center py-2 text-lg font-semibold text-primary">
                 (718) 364-5070
               </a>
             </div>
