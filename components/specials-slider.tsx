@@ -75,6 +75,15 @@ const specials = [
     image: "/images/special-engine.jpg",
     validUntil: "Call for Quote",
   },
+  {
+    id: 8,
+    title: "Window Tinting",
+    subtitle: "Professional Tint Installation",
+    description: "Keep cool and look sharp with professional window tinting. UV protection, heat rejection, and privacy.",
+    discount: "Popular Service",
+    image: "/images/special-tint.jpg",
+    validUntil: "Call for Quote",
+  },
 ]
 
 export function SpecialsSlider() {

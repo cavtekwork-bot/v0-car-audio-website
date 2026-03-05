@@ -1,6 +1,6 @@
 "use client"
 
-import { Volume2, Shield, Smartphone, Radio, Camera, Settings, ArrowRight, Wrench, Car, Battery, Disc, Key } from "lucide-react"
+import { Volume2, Shield, Smartphone, Radio, Camera, Settings, ArrowRight, Wrench, Car, Battery, Disc, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const services = [
@@ -51,6 +51,12 @@ const services = [
     title: "Battery Services",
     description: "Car battery testing, replacement, and key fob battery services.",
     features: ["Battery Testing", "Battery Replacement", "Key Fob Batteries", "Jump Starts"],
+  },
+  {
+    icon: Sun,
+    title: "Window Tinting",
+    description: "Professional window tinting for privacy, UV protection, and a sleek look. Multiple shade options available.",
+    features: ["UV Protection", "Heat Rejection", "Privacy Tint", "Ceramic Film"],
   },
   {
     icon: Camera,
