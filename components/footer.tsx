@@ -1,25 +1,25 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Facebook, Instagram, Youtube } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-black border-t border-orange-500/20">
+    <footer className="bg-black border-t border-orange-500/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="block mb-4">
-              <Image 
-                src="/images/logo.png"
-                alt="Top Notch Auto Audio & Security"
-                width={200}
-                height={80}
-                className="h-16 w-auto"
-              />
+              <div className="flex flex-col">
+                <span className="text-2xl font-black tracking-tight bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent">
+                  TOP NOTCH
+                </span>
+                <span className="text-xs font-bold tracking-[0.15em] text-orange-400 uppercase">
+                  Auto Audio & Security
+                </span>
+              </div>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              Premium car audio and security solutions. Professional installation by certified technicians.
+              Full service auto shop - car audio, security, and mechanic services. Professional work at affordable prices.
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Facebook">
@@ -70,7 +70,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-orange-500/30 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Top Notch Auto Audio and Security. All rights reserved.
           </p>

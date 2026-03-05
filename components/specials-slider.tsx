@@ -134,44 +134,40 @@ export function SpecialsSlider() {
         <CarouselContent className="ml-0">
           {specials.map((special) => (
             <CarouselItem key={special.id} className="pl-0 basis-full">
-              <div className="relative w-full aspect-[16/9] md:aspect-[21/9] lg:aspect-[3/1] bg-black">
-                {/* Background Image - Logo Banner */}
+              <div className="relative w-full aspect-[16/9] md:aspect-[21/9] lg:aspect-[3/1]">
+                {/* Background Image */}
                 <Image
-                  src="/images/logo.png"
-                  alt="Top Notch Auto Audio & Security"
+                  src={special.image || "/placeholder.svg"}
+                  alt={special.title}
                   fill
-                  className="object-contain object-center"
+                  className="object-cover"
                   priority
                 />
                 
-                {/* Dark Overlay for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent" />
                 
-                {/* Content - Positioned at bottom */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8">
-                  <div className="container mx-auto">
-                    <div className="flex flex-wrap items-end justify-between gap-4">
-                      <div>
-                        {/* Discount Badge */}
-                        <span className="inline-block bg-orange-500 text-white px-4 py-2 rounded-md text-lg md:text-2xl font-bold mb-2 shadow-lg">
-                          {special.discount}
-                        </span>
-                        
-                        {/* Title */}
-                        <h2 className="text-white text-xl md:text-3xl font-bold">
-                          {special.subtitle}
-                        </h2>
-                        <p className="text-white/80 text-sm md:text-base mt-1">
-                          {special.description}
-                        </p>
-                      </div>
+                {/* Content */}
+                <div className="absolute inset-0 flex items-center">
+                  <div className="container mx-auto px-4 md:px-8">
+                    <div className="max-w-xl">
+                      {/* Title */}
+                      <p className="text-xs md:text-sm text-orange-500 font-bold uppercase tracking-wider">
+                        {special.title}
+                      </p>
+                      <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mt-1 mb-2 md:mb-3 text-balance">
+                        {special.subtitle}
+                      </h2>
+                      
+                      {/* Description */}
+                      <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4 hidden sm:block max-w-md">
+                        {special.description}
+                      </p>
                       
                       {/* CTA */}
-                      <div className="flex items-center gap-3">
-                        <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold" asChild>
-                          <a href="tel:7183645070">(718) 364-5070</a>
-                        </Button>
-                      </div>
+                      <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold" asChild>
+                        <a href="tel:7183645070">Call (718) 364-5070</a>
+                      </Button>
                     </div>
                   </div>
                 </div>

@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
@@ -16,19 +15,19 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-orange-500/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-orange-500/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Image 
-              src="/images/logo.png"
-              alt="Top Notch Auto Audio & Security"
-              width={280}
-              height={100}
-              className="h-14 md:h-[70px] w-auto"
-              priority
-            />
+            <div className="flex flex-col">
+              <span className="text-xl md:text-2xl font-black tracking-tight bg-gradient-to-r from-orange-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent drop-shadow-lg" style={{textShadow: '0 0 30px rgba(249,115,22,0.5)'}}>
+                TOP NOTCH
+              </span>
+              <span className="text-[10px] md:text-xs font-bold tracking-[0.15em] text-orange-400 uppercase">
+                Auto Audio & Security
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -46,8 +45,8 @@ export function Header() {
 
           {/* Phone Number */}
           <div className="hidden md:flex items-center">
-            <a href="tel:7183645070" className="flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary transition-colors">
-              <span className="text-primary">(718) 364-5070</span>
+            <a href="tel:7183645070" className="text-sm font-bold text-orange-400 hover:text-orange-300 transition-colors">
+              (718) 364-5070
             </a>
           </div>
 
@@ -76,8 +75,8 @@ export function Header() {
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4 border-t border-border">
-              <a href="tel:7183645070" className="block w-full text-center py-2 text-lg font-semibold text-primary">
+            <div className="pt-4 border-t border-orange-500/30">
+              <a href="tel:7183645070" className="block w-full text-center py-2 text-lg font-bold text-orange-400">
                 (718) 364-5070
               </a>
             </div>
