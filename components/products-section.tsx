@@ -5,40 +5,75 @@ import { Button } from "@/components/ui/button"
 import { Star } from "lucide-react"
 
 const brands = [
-  "JL Audio",
-  "Alpine",
-  "Kenwood",
-  "Pioneer",
-  "Kicker",
-  "Rockford Fosgate",
-  "Sony",
+  "JVC",
   "Compustar",
+  "Viper",
+  "Crunch",
+  "Nakamichi",
+  "Stetsom",
+  "PRV Audio",
 ]
 
 const featuredProducts = [
   {
-    name: "JL Audio 12W6v3",
-    category: "Subwoofer",
+    name: "Viper 5706V",
+    category: "Security & Remote Start",
     rating: 5,
-    image: "/images/subwoofer.jpg",
+    image: "https://images.crutchfieldonline.com/ImageHandler/trim/750/457/products/2015/22/094/g09457066-F.jpg",
   },
   {
-    name: "Alpine iLX-W670",
-    category: "Head Unit",
+    name: "Crunch GP-3500.1D",
+    category: "Amplifier - 3500W",
     rating: 5,
-    image: "/images/head-unit.jpg",
+    image: "https://crunchcaraudio.com/wp-content/uploads/2023/01/GP-3500.1D_angle.png",
   },
   {
-    name: "Compustar CS7900-AS",
-    category: "Remote Start",
+    name: "JVC KW-M690BW",
+    category: "Head Unit - Wireless CarPlay",
+    rating: 5,
+    image: "https://www.us.jvc.com/car/indashreceivers/kw_m690bw/img/main.png",
+  },
+  {
+    name: "JVC KD-X280BT",
+    category: "Digital Media Receiver",
+    rating: 5,
+    image: "https://www.us.jvc.com/car/indashreceivers/kd_x280bt/img/main.png",
+  },
+  {
+    name: "Nakamichi NA3625-W6",
+    category: "Wireless CarPlay/Android Auto",
+    rating: 5,
+    image: "https://vipproaudio.com/cdn/shop/files/nakamichi-na3625-w6.jpg?v=1701471892",
+  },
+  {
+    name: "Compustar CSX9900-AS",
+    category: "Remote Start & Security",
+    rating: 5,
+    image: "https://www.compustar.com/wp-content/uploads/2023/05/CSX9900AS-bundle-1.png",
+  },
+  {
+    name: "Compustar CS8920-AS",
+    category: "Remote Start & Security",
+    rating: 5,
+    image: "https://www.compustar.com/wp-content/uploads/2023/05/CSX8920AS-bundle.png",
+  },
+  {
+    name: "Compustar CS4900-AS",
+    category: "Remote Start & Security",
     rating: 4,
-    image: "/images/remote-start.jpg",
+    image: "https://www.compustar.com/wp-content/uploads/2023/05/CSX4900-AS-bundle.png",
   },
   {
-    name: "Kicker KS Series",
-    category: "Component Speakers",
+    name: "Stetsom Attack 3000 Bravo",
+    category: "Amplifier - 3000W",
     rating: 5,
-    image: "/images/speakers.jpg",
+    image: "https://stetsom.com.br/wp-content/uploads/2022/08/bravo-attack-3000-1-ohm.png",
+  },
+  {
+    name: "PRV Audio 6FR200",
+    category: "Full Range Speaker - 200W",
+    rating: 5,
+    image: "https://prvaudio.com/cdn/shop/products/6FR200-4_main_1200x1200.jpg",
   },
 ]
 
@@ -74,7 +109,7 @@ export function ProductsSection() {
           <h3 className="font-serif text-2xl font-semibold text-foreground mb-8 text-center">Featured Products</h3>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {featuredProducts.map((product) => (
             <div
               key={product.name}
@@ -85,7 +120,8 @@ export function ProductsSection() {
                   src={product.image || "/placeholder.svg"}
                   alt={product.name}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  unoptimized
+                  className="object-contain group-hover:scale-105 transition-transform duration-500 p-4"
                 />
               </div>
               <div className="p-4">
