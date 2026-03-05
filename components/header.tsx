@@ -3,7 +3,6 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
 
 const navLinks = [
   { name: "Services", href: "#services" },
@@ -48,11 +47,11 @@ export function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* Phone Number */}
           <div className="hidden md:flex items-center">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Book Appointment
-            </Button>
+            <a href="tel:7183645070" className="flex items-center gap-2 text-sm font-semibold text-foreground hover:text-primary transition-colors">
+              <span className="text-primary">(718) 364-5070</span>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -81,9 +80,9 @@ export function Header() {
               </Link>
             ))}
             <div className="pt-4 border-t border-border">
-              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                Book Appointment
-              </Button>
+              <a href="tel:7183645070" className="block w-full text-center py-2 text-lg font-semibold text-primary">
+                (718) 364-5070
+              </a>
             </div>
           </nav>
         </div>
