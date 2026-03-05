@@ -152,7 +152,7 @@ export function SpecialsSlider() {
                   <div className="container mx-auto px-4 md:px-8">
                     <div className="max-w-xl">
                       {/* Title */}
-                      <p className="text-xs md:text-sm text-orange-500 font-bold uppercase tracking-wider">
+                      <p className="text-xs md:text-sm text-primary font-bold uppercase tracking-wider">
                         {special.title}
                       </p>
                       <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mt-1 mb-2 md:mb-3 text-balance">
@@ -165,7 +165,7 @@ export function SpecialsSlider() {
                       </p>
                       
                       {/* CTA */}
-                      <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-bold" asChild>
+                      <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold" asChild>
                         <a href="tel:7183645070">Call (718) 364-5070</a>
                       </Button>
                     </div>
