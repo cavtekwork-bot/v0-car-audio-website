@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Instagram, Youtube } from "lucide-react"
 
 export function Footer() {
@@ -8,21 +9,21 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-4">
-              <svg 
-                viewBox="0 0 60 24" 
-                className="w-14 h-6 text-primary"
-                fill="currentColor"
-              >
-                <path d="M2 16c0 0 3-1 6-1s8 2 14 2c4 0 8-1 12-2s10-2 14-2c3 0 6 0.5 8 1l2 1v2c0 1-1 2-3 2.5s-5 0.5-8 0.5c-4 0-10-0.5-14-0.5s-8 0.5-12 0.5-7-0.5-10-1c-2-0.4-3-1-4-2l-1-1.5v-1.5z M8 14c1-3 3-5 6-6s7-1 11-1c5 0 10 1 14 2s7 3 9 5l-2 0.5c-2-2-4-3-7-4s-8-1.5-13-1.5c-4 0-8 0.5-11 1.5s-5 2-6 4l-1-0.5z M52 12.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z M10 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-              </svg>
+            <Link href="/" className="flex items-center gap-2 mb-4">
+              <Image 
+                src="/images/car-logo.png" 
+                alt="Top Notch Auto" 
+                width={80} 
+                height={40} 
+                className="h-12 w-auto"
+              />
               <div>
-                <span className="font-serif font-bold text-2xl tracking-wide text-foreground">FORDHAM</span>
-                <span className="block text-[10px] tracking-[0.25em] text-primary uppercase font-semibold">Auto & Security</span>
+                <span className="font-serif font-bold text-xl tracking-wide text-foreground">TOP NOTCH</span>
+                <span className="block text-[10px] tracking-[0.2em] text-primary uppercase font-semibold">Auto Audio & Security</span>
               </div>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              Premium car audio and security solutions. Professional installation by certified technicians.
+              Full service auto shop - car audio, security, and mechanic services. Professional work at affordable prices.
             </p>
             <div className="flex items-center gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Facebook">
@@ -53,7 +54,6 @@ export function Footer() {
           <div>
             <h4 className="font-serif font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About Us</Link></li>
               <li><Link href="#gallery" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Gallery</Link></li>
               <li><Link href="#products" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Products</Link></li>
               <li><Link href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
@@ -67,8 +67,8 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>2514 Hoffman Road</li>
               <li>Bronx, NY 10458</li>
-              <li><a href="tel:+17185551234" className="hover:text-foreground transition-colors">(718) 555-1234</a></li>
-              <li><a href="mailto:info@fordhamauto.com" className="hover:text-foreground transition-colors">info@fordhamauto.com</a></li>
+              <li><a href="tel:7183645070" className="hover:text-foreground transition-colors">(718) 364-5070</a></li>
+              <li><a href="mailto:topnotchautoaudio@gmail.com" className="hover:text-foreground transition-colors">topnotchautoaudio@gmail.com</a></li>
             </ul>
           </div>
         </div>
@@ -76,7 +76,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Fordham Auto and Security. All rights reserved.
+            &copy; {new Date().getFullYear()} Top Notch Auto Audio and Security. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
             <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link>

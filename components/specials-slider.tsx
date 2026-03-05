@@ -9,28 +9,24 @@ import {
   type CarouselApi 
 } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Clock } from "lucide-react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const specials = [
   {
     id: 1,
-    title: "Winter Special",
+    title: "Audio Installation",
     subtitle: "Remote Start Installation",
-    description: "Stay warm this winter! Get a complete remote start system installed.",
-    discount: "20% OFF",
-    originalPrice: "$499",
-    salePrice: "$399",
+    description: "Stay warm this winter! Get a complete remote start system installed by our experts.",
+    discount: "10% OFF Installation",
     image: "/images/special-remote-start.jpg",
-    validUntil: "Ends March 31st",
+    validUntil: "Limited Time Offer",
   },
   {
     id: 2,
-    title: "Bass Drop Deal",
+    title: "Audio Bundle",
     subtitle: "Subwoofer + Amp Combo",
     description: "12\" Subwoofer with 500W Amplifier and custom enclosure. Professional installation included.",
-    discount: "$150 OFF",
-    originalPrice: "$799",
-    salePrice: "$649",
+    discount: "10% OFF Bundle",
     image: "/images/special-subwoofer.jpg",
     validUntil: "Limited Time Offer",
   },
@@ -39,22 +35,54 @@ const specials = [
     title: "Security Bundle",
     subtitle: "Alarm + Camera System",
     description: "Complete vehicle security with alarm system, dash cam, and GPS tracking.",
-    discount: "25% OFF",
-    originalPrice: "$899",
-    salePrice: "$674",
+    discount: "10% OFF Bundle",
     image: "/images/special-security.jpg",
     validUntil: "While Supplies Last",
   },
   {
     id: 4,
-    title: "Tech Upgrade",
+    title: "Tech Installation",
     subtitle: "Apple CarPlay / Android Auto",
     description: "Upgrade your factory radio to a touchscreen with Apple CarPlay and Android Auto.",
-    discount: "Free Install",
-    originalPrice: "$599",
-    salePrice: "$449",
+    discount: "10% OFF Installation",
     image: "/images/special-carplay.jpg",
     validUntil: "This Month Only",
+  },
+  {
+    id: 5,
+    title: "Low Prices - Fast Service",
+    subtitle: "Oil Change Special",
+    description: "Keep your engine running smooth with our professional oil change service. In and out fast!",
+    discount: "Low Prices",
+    image: "/images/special-oil-change.jpg",
+    validUntil: "Always Available",
+  },
+  {
+    id: 6,
+    title: "Low Prices - Fast Service",
+    subtitle: "Brake Pads & Rotors",
+    description: "Full brake inspection and replacement. Same-day service available. Keep your family safe!",
+    discount: "Fast Service",
+    image: "/images/special-brakes.jpg",
+    validUntil: "Call for Quote",
+  },
+  {
+    id: 7,
+    title: "Low Prices - Fast Service",
+    subtitle: "Engine Repair & Diagnostics",
+    description: "Full engine diagnostics, repair, and headers replacement. Quick turnaround, affordable prices.",
+    discount: "Low Prices",
+    image: "/images/special-engine.jpg",
+    validUntil: "Call for Quote",
+  },
+  {
+    id: 8,
+    title: "Security Installation",
+    subtitle: "Window Tinting",
+    description: "Keep cool and look sharp with professional window tinting. UV protection and privacy.",
+    discount: "10% OFF Installation",
+    image: "/images/special-tint.jpg",
+    validUntil: "Call for Quote",
   },
 ]
 
@@ -123,13 +151,8 @@ export function SpecialsSlider() {
                 <div className="absolute inset-0 flex items-center">
                   <div className="container mx-auto px-4 md:px-8">
                     <div className="max-w-xl">
-                      {/* Discount Badge */}
-                      <span className="inline-block bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm md:text-base font-bold mb-3">
-                        {special.discount}
-                      </span>
-                      
                       {/* Title */}
-                      <p className="text-xs md:text-sm text-muted-foreground font-medium uppercase tracking-wider">
+                      <p className="text-xs md:text-sm text-primary font-bold uppercase tracking-wider">
                         {special.title}
                       </p>
                       <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mt-1 mb-2 md:mb-3 text-balance">
@@ -141,22 +164,10 @@ export function SpecialsSlider() {
                         {special.description}
                       </p>
                       
-                      {/* Pricing & CTA */}
-                      <div className="flex flex-wrap items-center gap-3 md:gap-4">
-                        <div className="flex items-baseline gap-2">
-                          <span className="text-2xl md:text-3xl font-bold text-foreground">{special.salePrice}</span>
-                          <span className="text-sm md:text-base text-muted-foreground line-through">{special.originalPrice}</span>
-                        </div>
-                        <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                          Claim Offer
-                        </Button>
-                      </div>
-                      
-                      {/* Valid Until */}
-                      <div className="flex items-center gap-1.5 mt-3 text-xs md:text-sm text-muted-foreground">
-                        <Clock className="w-3.5 h-3.5" />
-                        {special.validUntil}
-                      </div>
+                      {/* CTA */}
+                      <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold" asChild>
+                        <a href="tel:7183645070">Call (718) 364-5070</a>
+                      </Button>
                     </div>
                   </div>
                 </div>

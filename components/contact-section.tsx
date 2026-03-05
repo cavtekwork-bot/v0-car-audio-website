@@ -1,11 +1,43 @@
 "use client"
 
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 
 export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    vehicle: "",
+    service: "",
+    message: "",
+  })
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    const subject = `New Inquiry from ${formData.name} - ${formData.service || "General"}`
+    const body = `
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Vehicle: ${formData.vehicle}
+Service Interested In: ${formData.service}
+
+Message:
+${formData.message}
+    `.trim()
+
+    window.location.href = `mailto:topnotchautoaudio@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }))
+  }
+
   return (
     <section id="contact" className="py-20 md:py-32 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,8 +71,8 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Phone</h4>
-                  <a href="tel:+17185551234" className="text-muted-foreground hover:text-primary transition-colors">
-                    (718) 555-1234
+                  <a href="tel:7183645070" className="text-muted-foreground hover:text-primary transition-colors">
+                    (718) 364-5070
                   </a>
                 </div>
               </div>
@@ -51,8 +83,8 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Email</h4>
-                  <a href="mailto:info@fordhamauto.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    info@fordhamauto.com
+                  <a href="mailto:topnotchautoaudio@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    topnotchautoaudio@gmail.com
                   </a>
                 </div>
               </div>
@@ -65,7 +97,7 @@ export function ContactSection() {
                   <h4 className="font-semibold text-foreground">Hours</h4>
                   <p className="text-muted-foreground">
                     Mon - Fri: 9am - 6pm<br />
-                    Saturday: 10am - 4pm<br />
+                    Saturday: 9am - 5pm<br />
                     Sunday: Closed
                   </p>
                 </div>
@@ -76,7 +108,7 @@ export function ContactSection() {
           {/* Right Column - Form */}
           <div className="bg-card border border-border rounded-lg p-6 md:p-8">
             <h3 className="font-serif text-2xl font-semibold text-foreground mb-6">Send Us a Message</h3>
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -85,6 +117,8 @@ export function ContactSection() {
                   <Input
                     id="name"
                     placeholder="Your name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="bg-background border-border text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
@@ -96,6 +130,8 @@ export function ContactSection() {
                     id="phone"
                     type="tel"
                     placeholder="(555) 000-0000"
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="bg-background border-border text-foreground placeholder:text-muted-foreground"
                   />
                 </div>
@@ -109,6 +145,8 @@ export function ContactSection() {
                   id="email"
                   type="email"
                   placeholder="you@example.com"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="bg-background border-border text-foreground placeholder:text-muted-foreground"
                 />
               </div>
@@ -120,6 +158,8 @@ export function ContactSection() {
                 <Input
                   id="vehicle"
                   placeholder="e.g., 2024 Honda Civic"
+                  value={formData.vehicle}
+                  onChange={handleChange}
                   className="bg-background border-border text-foreground placeholder:text-muted-foreground"
                 />
               </div>
@@ -130,15 +170,22 @@ export function ContactSection() {
                 </label>
                 <select
                   id="service"
+                  value={formData.service}
+                  onChange={handleChange}
                   className="flex h-10 w-full rounded-md border border-border bg-background px-3 py-2 text-sm text-foreground ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
                   <option value="">Select a service</option>
-                  <option value="audio">Car Audio System</option>
-                  <option value="security">Security / Alarm</option>
-                  <option value="remote-start">Remote Start</option>
-                  <option value="carplay">Apple CarPlay / Android Auto</option>
-                  <option value="camera">Backup Camera</option>
-                  <option value="other">Other</option>
+                  <option value="Car Audio System">Car Audio System</option>
+                  <option value="Security / Alarm">Security / Alarm</option>
+                  <option value="Remote Start">Remote Start</option>
+                  <option value="Apple CarPlay / Android Auto">Apple CarPlay / Android Auto</option>
+                  <option value="Backup Camera">Backup Camera</option>
+                  <option value="Window Tinting">Window Tinting</option>
+                  <option value="Engine Repair">Engine Repair</option>
+                  <option value="Oil Change">Oil Change</option>
+                  <option value="Brake Service">Brake Service</option>
+                  <option value="Battery Service">Battery Service</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
@@ -150,6 +197,8 @@ export function ContactSection() {
                   id="message"
                   placeholder="Tell us about your project..."
                   rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
                   className="bg-background border-border text-foreground placeholder:text-muted-foreground resize-none"
                 />
               </div>
