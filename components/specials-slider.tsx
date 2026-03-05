@@ -17,9 +17,7 @@ const specials = [
     title: "Winter Special",
     subtitle: "Remote Start Installation",
     description: "Stay warm this winter! Get a complete remote start system installed.",
-    discount: "20% OFF",
-    originalPrice: "$499",
-    salePrice: "$399",
+    discount: "Special Offer",
     image: "/images/special-remote-start.jpg",
     validUntil: "Ends March 31st",
   },
@@ -28,9 +26,7 @@ const specials = [
     title: "Bass Drop Deal",
     subtitle: "Subwoofer + Amp Combo",
     description: "12\" Subwoofer with 500W Amplifier and custom enclosure. Professional installation included.",
-    discount: "$150 OFF",
-    originalPrice: "$799",
-    salePrice: "$649",
+    discount: "Great Deal",
     image: "/images/special-subwoofer.jpg",
     validUntil: "Limited Time Offer",
   },
@@ -39,9 +35,7 @@ const specials = [
     title: "Security Bundle",
     subtitle: "Alarm + Camera System",
     description: "Complete vehicle security with alarm system, dash cam, and GPS tracking.",
-    discount: "25% OFF",
-    originalPrice: "$899",
-    salePrice: "$674",
+    discount: "Bundle & Save",
     image: "/images/special-security.jpg",
     validUntil: "While Supplies Last",
   },
@@ -51,8 +45,6 @@ const specials = [
     subtitle: "Apple CarPlay / Android Auto",
     description: "Upgrade your factory radio to a touchscreen with Apple CarPlay and Android Auto.",
     discount: "Free Install",
-    originalPrice: "$599",
-    salePrice: "$449",
     image: "/images/special-carplay.jpg",
     validUntil: "This Month Only",
   },
@@ -141,14 +133,13 @@ export function SpecialsSlider() {
                         {special.description}
                       </p>
                       
-                      {/* Pricing & CTA */}
+                      {/* CTA */}
                       <div className="flex flex-wrap items-center gap-3 md:gap-4">
-                        <div className="flex items-baseline gap-2">
-                          <span className="text-2xl md:text-3xl font-bold text-foreground">{special.salePrice}</span>
-                          <span className="text-sm md:text-base text-muted-foreground line-through">{special.originalPrice}</span>
-                        </div>
-                        <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                          Claim Offer
+                        <a href="tel:7183645070" className="text-xl md:text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
+                          Call for Quote
+                        </a>
+                        <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground" asChild>
+                          <a href="tel:7183645070">(718) 364-5070</a>
                         </Button>
                       </div>
                       

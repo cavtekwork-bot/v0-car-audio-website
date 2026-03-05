@@ -19,28 +19,24 @@ const featuredProducts = [
   {
     name: "JL Audio 12W6v3",
     category: "Subwoofer",
-    price: "$449",
     rating: 5,
     image: "/images/subwoofer.jpg",
   },
   {
     name: "Alpine iLX-W670",
     category: "Head Unit",
-    price: "$599",
     rating: 5,
     image: "/images/head-unit.jpg",
   },
   {
     name: "Compustar CS7900-AS",
     category: "Remote Start",
-    price: "$399",
     rating: 4,
     image: "/images/remote-start.jpg",
   },
   {
     name: "Kicker KS Series",
     category: "Component Speakers",
-    price: "$279",
     rating: 5,
     image: "/images/speakers.jpg",
   },
@@ -104,7 +100,9 @@ export function ProductsSection() {
                   ))}
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="font-serif text-xl font-bold text-foreground">{product.price}</span>
+                  <a href="tel:7183645070" className="font-semibold text-primary hover:text-primary/80 transition-colors">
+                    Call for Quote
+                  </a>
                   <Button size="sm" variant="outline" className="text-foreground border-border hover:bg-primary hover:text-primary-foreground hover:border-primary bg-transparent">
                     View Details
                   </Button>
