@@ -1,28 +1,6 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Instagram, Youtube } from "lucide-react"
-
-// Sleek minimalist supercar silhouette
-function SportsCarIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 100 40" fill="currentColor" className={className}>
-      {/* Sleek supercar body - flowing aerodynamic lines */}
-      <path d="M5 28 Q8 26 15 25 Q25 24 35 20 Q45 16 55 14 Q65 13 75 14 Q85 15 92 18 L95 20 Q96 22 95 24 L93 26 Q88 28 80 28 Q75 28 72 26 Q70 24 68 24 Q66 24 64 26 Q62 28 58 28 L42 28 Q38 28 36 26 Q34 24 32 24 Q30 24 28 26 Q26 28 22 28 L12 28 Q8 28 5 28 Z" />
-      {/* Roof line accent */}
-      <path d="M40 18 Q50 14 60 13 Q70 13 78 15" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.6" />
-      {/* Window */}
-      <path d="M42 19 Q52 15 62 14 Q70 14 76 16 L74 18 Q65 17 55 18 Q48 19 42 21 Z" opacity="0.3" />
-      {/* Front wheel */}
-      <circle cx="30" cy="27" r="5" />
-      <circle cx="30" cy="27" r="2.5" opacity="0.4" />
-      {/* Rear wheel */}
-      <circle cx="70" cy="27" r="5" />
-      <circle cx="70" cy="27" r="2.5" opacity="0.4" />
-      {/* Speed lines */}
-      <line x1="0" y1="20" x2="8" y2="20" stroke="currentColor" strokeWidth="1.5" opacity="0.3" />
-      <line x1="2" y1="24" x2="10" y2="24" stroke="currentColor" strokeWidth="1.5" opacity="0.2" />
-    </svg>
-  )
-}
 
 export function Footer() {
   return (
@@ -31,8 +9,14 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-4">
-              <SportsCarIcon className="w-16 h-8 text-primary" />
+            <Link href="/" className="flex items-center gap-2 mb-4">
+              <Image 
+                src="/images/car-logo.png" 
+                alt="Top Notch Auto" 
+                width={80} 
+                height={40} 
+                className="h-12 w-auto"
+              />
               <div>
                 <span className="font-serif font-bold text-xl tracking-wide text-foreground">TOP NOTCH</span>
                 <span className="block text-[10px] tracking-[0.2em] text-primary uppercase font-semibold">Auto Audio & Security</span>
