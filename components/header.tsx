@@ -2,7 +2,16 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X, Car } from "lucide-react"
+import { Menu, X } from "lucide-react"
+
+// Modern minimalist sports car icon
+function SportsCarIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 32" fill="currentColor" className={className}>
+      <path d="M58 20h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2h-1c0 2.2-1.8 4-4 4s-4-1.8-4-4H13c0 2.2-1.8 4-4 4s-4-1.8-4-4H2c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2l4-6c1.5-2.3 4-4 7-4h10l8-4c1-.5 2.1-.5 3 0l12 6c2 1 4 3 5 5l7 2v3zM9 28c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm46 0c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zM12 14H8l-2 4h8l-2-4zm6-4v8h12v-8H18zm14 0v8h10l-4-6-6-2z" />
+    </svg>
+  )
+}
 
 const navLinks = [
   { name: "Services", href: "#services" },
@@ -20,7 +29,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Car className="w-10 h-10 text-primary" />
+            <SportsCarIcon className="w-12 h-6 text-primary" />
             <div className="hidden sm:block">
               <span className="font-serif font-bold text-xl tracking-wide text-foreground">TOP NOTCH</span>
               <span className="block text-[10px] tracking-[0.2em] text-primary uppercase font-semibold">Auto Audio & Security</span>
