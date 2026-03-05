@@ -22,15 +22,15 @@ export function HeroSection() {
           {/* Left Column - Text */}
           <div className="text-center">
             <p className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium mb-6">
-              Premium Car Audio & Security
+              Full Service Auto Shop - Audio, Security & Mechanic Services
             </p>
             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground leading-[1.1] text-balance">
               Elevate Your
               <span className="block text-primary">Driving Experience</span>
             </h1>
             <p className="mt-4 text-base text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Transform your vehicle with cutting-edge audio systems and advanced security solutions. 
-              Professional installation by certified technicians.
+              Your complete auto shop for car audio, security systems, oil changes, brake service, engine repair, and more. 
+              Professional service by experienced technicians.
             </p>
             
             {/* CTA Buttons */}

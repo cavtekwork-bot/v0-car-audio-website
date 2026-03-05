@@ -12,9 +12,16 @@ const brands = [
   "Nakamichi",
   "Stetsom",
   "PRV Audio",
+  "Kole Audio",
+  "Mobil 1",
+  "Castrol",
+  "Pennzoil",
+  "Wagner",
+  "Bosch",
 ]
 
-const featuredProducts = [
+// Audio & Security Products
+const audioProducts = [
   {
     name: "Viper 5706V",
     category: "Security & Remote Start",
@@ -26,6 +33,18 @@ const featuredProducts = [
     category: "Amplifier - 3500W",
     rating: 5,
     image: "/images/products/crunch-3500.jpg",
+  },
+  {
+    name: "AP2000W APWM 200",
+    category: "Amplifier - 2000W",
+    rating: 5,
+    image: "/images/products/ap2000w.jpg",
+  },
+  {
+    name: "Kole Audio KP2000.4D",
+    category: "4-Channel Amplifier",
+    rating: 5,
+    image: "/images/products/kole-audio-kp2000.jpg",
   },
   {
     name: "JVC KW-M690BW",
@@ -77,81 +96,163 @@ const featuredProducts = [
   },
 ]
 
+// Motor Oils - American & Japanese
+const oilProducts = [
+  {
+    name: "Mobil 1 Synthetic 5W-30",
+    category: "Full Synthetic Oil",
+    rating: 5,
+    image: "/images/products/mobil1-oil.jpg",
+  },
+  {
+    name: "Castrol Edge 5W-30",
+    category: "Advanced Full Synthetic",
+    rating: 5,
+    image: "/images/products/castrol-oil.jpg",
+  },
+  {
+    name: "Pennzoil Platinum",
+    category: "Full Synthetic Oil",
+    rating: 5,
+    image: "/images/products/pennzoil.jpg",
+  },
+  {
+    name: "Valvoline Full Synthetic",
+    category: "High Mileage Oil",
+    rating: 5,
+    image: "/images/products/valvoline.jpg",
+  },
+  {
+    name: "Toyota Genuine Motor Oil",
+    category: "OEM Japanese Formula",
+    rating: 5,
+    image: "/images/products/toyota-oil.jpg",
+  },
+  {
+    name: "Honda Genuine Motor Oil",
+    category: "OEM Japanese Formula",
+    rating: 5,
+    image: "/images/products/honda-oil.jpg",
+  },
+]
+
+// Brake Pads
+const brakeProducts = [
+  {
+    name: "Ceramic Brake Pads",
+    category: "Premium Ceramic",
+    rating: 5,
+    image: "/images/products/ceramic-brake-pads.jpg",
+  },
+  {
+    name: "Wagner ThermoQuiet",
+    category: "Ceramic Brake Pads",
+    rating: 5,
+    image: "/images/products/wagner-brakes.jpg",
+  },
+  {
+    name: "Bosch QuietCast",
+    category: "Premium Brake Pads",
+    rating: 5,
+    image: "/images/products/bosch-brakes.jpg",
+  },
+]
+
+function ProductCard({ product }: { product: { name: string; category: string; rating: number; image: string } }) {
+  return (
+    <div className="group bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300">
+      <div className="aspect-square relative bg-secondary/50 overflow-hidden">
+        <Image
+          src={product.image || "/placeholder.svg"}
+          alt={product.name}
+          fill
+          unoptimized
+          className="object-contain group-hover:scale-105 transition-transform duration-500 p-4"
+        />
+      </div>
+      <div className="p-4">
+        <p className="text-xs text-primary font-medium uppercase tracking-wide mb-1">{product.category}</p>
+        <h4 className="font-semibold text-foreground mb-2 text-sm">{product.name}</h4>
+        <div className="flex items-center gap-1 mb-3">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star
+              key={i}
+              className={`w-3 h-3 ${i < product.rating ? "text-primary fill-primary" : "text-muted-foreground"}`}
+            />
+          ))}
+        </div>
+        <a href="tel:7183645070" className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
+          Call for Quote
+        </a>
+      </div>
+    </div>
+  )
+}
+
 export function ProductsSection() {
   return (
     <section id="products" className="py-20 md:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">Top Brands</p>
+          <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">Full Service Auto Shop</p>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground text-balance">
-            Premium Products We Trust
+            Audio, Security & Mechanic Products
           </h2>
           <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-            We only work with industry-leading brands to ensure quality and reliability.
+            From premium car audio to quality motor oils and brake parts - we stock everything your vehicle needs.
           </p>
         </div>
 
         {/* Brand Logos */}
-        <div className="flex flex-wrap justify-center items-center gap-8 mb-16 pb-16 border-b border-border">
+        <div className="flex flex-wrap justify-center items-center gap-6 mb-16 pb-16 border-b border-border">
           {brands.map((brand) => (
             <div
               key={brand}
-              className="text-muted-foreground/50 hover:text-foreground transition-colors font-serif text-xl font-bold"
+              className="text-muted-foreground/50 hover:text-foreground transition-colors font-serif text-lg font-bold"
             >
               {brand}
             </div>
           ))}
         </div>
 
-        {/* Featured Products */}
-        <div className="mb-8">
-          <h3 className="font-serif text-2xl font-semibold text-foreground mb-8 text-center">Featured Products</h3>
+        {/* Audio & Security Products */}
+        <div className="mb-12">
+          <h3 className="font-serif text-2xl font-semibold text-foreground mb-8 text-center">Car Audio & Security</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {audioProducts.map((product) => (
+              <ProductCard key={product.name} product={product} />
+            ))}
+          </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-          {featuredProducts.map((product) => (
-            <div
-              key={product.name}
-              className="group bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300"
-            >
-              <div className="aspect-square relative bg-secondary/50 overflow-hidden">
-                <Image
-                  src={product.image || "/placeholder.svg"}
-                  alt={product.name}
-                  fill
-                  unoptimized
-                  className="object-contain group-hover:scale-105 transition-transform duration-500 p-4"
-                />
-              </div>
-              <div className="p-4">
-                <p className="text-xs text-primary font-medium uppercase tracking-wide mb-1">{product.category}</p>
-                <h4 className="font-semibold text-foreground mb-2">{product.name}</h4>
-                <div className="flex items-center gap-1 mb-3">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className={`w-3.5 h-3.5 ${i < product.rating ? "text-primary fill-primary" : "text-muted-foreground"}`}
-                    />
-                  ))}
-                </div>
-                <div className="flex items-center justify-between">
-                  <a href="tel:7183645070" className="font-semibold text-primary hover:text-primary/80 transition-colors">
-                    Call for Quote
-                  </a>
-                  <Button size="sm" variant="outline" className="text-foreground border-border hover:bg-primary hover:text-primary-foreground hover:border-primary bg-transparent">
-                    View Details
-                  </Button>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Motor Oils */}
+        <div className="mb-12 pt-12 border-t border-border">
+          <h3 className="font-serif text-2xl font-semibold text-foreground mb-4 text-center">Motor Oils</h3>
+          <p className="text-muted-foreground text-center mb-8">Premium oils for American & Japanese vehicles</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
+            {oilProducts.map((product) => (
+              <ProductCard key={product.name} product={product} />
+            ))}
+          </div>
+        </div>
+
+        {/* Brake Pads */}
+        <div className="mb-12 pt-12 border-t border-border">
+          <h3 className="font-serif text-2xl font-semibold text-foreground mb-4 text-center">Brake Pads & Parts</h3>
+          <p className="text-muted-foreground text-center mb-8">Quality brake components for all makes and models</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            {brakeProducts.map((product) => (
+              <ProductCard key={product.name} product={product} />
+            ))}
+          </div>
         </div>
 
         <div className="mt-12 text-center">
-          <Button size="lg" variant="outline" className="text-foreground border-border hover:bg-secondary bg-transparent">
-            View All Products
-          </Button>
+          <p className="text-muted-foreground mb-4">Need something specific? We can order any part you need.</p>
+          <a href="tel:7183645070" className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground font-semibold rounded-md hover:bg-primary/90 transition-colors">
+            Call (718) 364-5070
+          </a>
         </div>
       </div>
     </section>
