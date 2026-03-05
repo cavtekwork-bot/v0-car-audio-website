@@ -1,6 +1,6 @@
 "use client"
 
-import { Volume2, Shield, Smartphone, Radio, Camera, Settings, ArrowRight } from "lucide-react"
+import { Volume2, Shield, Smartphone, Radio, Camera, Settings, ArrowRight, Wrench, Car, Battery, Disc, Key } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const services = [
@@ -29,6 +29,30 @@ const services = [
     features: ["Wireless CarPlay", "Android Auto", "Screen Mirroring", "USB Integration"],
   },
   {
+    icon: Wrench,
+    title: "Engine Repair",
+    description: "Full engine diagnostics and repair services. We keep your vehicle running smoothly.",
+    features: ["Diagnostics", "Engine Repair", "Headers Replacement", "Tune-Ups"],
+  },
+  {
+    icon: Car,
+    title: "Oil Changes & Maintenance",
+    description: "Regular maintenance to extend the life of your vehicle. Quick and affordable service.",
+    features: ["Oil Changes", "Fluid Top-Offs", "Filter Replacement", "Inspections"],
+  },
+  {
+    icon: Disc,
+    title: "Brake Services",
+    description: "Complete brake repair and replacement. Keep your family safe on the road.",
+    features: ["Brake Pads", "Rotors", "Brake Fluid", "Full Inspection"],
+  },
+  {
+    icon: Battery,
+    title: "Battery Services",
+    description: "Car battery testing, replacement, and key fob battery services.",
+    features: ["Battery Testing", "Battery Replacement", "Key Fob Batteries", "Jump Starts"],
+  },
+  {
     icon: Camera,
     title: "Backup Cameras & Sensors",
     description: "Enhanced visibility and parking assistance for safer driving and maneuvering.",
@@ -50,10 +74,10 @@ export function ServicesSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-primary font-medium text-sm uppercase tracking-widest mb-4">Our Services</p>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-foreground text-balance">
-            Complete Audio & Security Solutions
+            Audio, Security & Mechanic Services
           </h2>
           <p className="mt-4 text-muted-foreground text-lg leading-relaxed">
-            From premium sound systems to advanced security, we offer everything you need to upgrade your vehicle.
+            From premium sound systems and security to full mechanic services. Your one-stop auto shop in the Bronx.
           </p>
         </div>
 

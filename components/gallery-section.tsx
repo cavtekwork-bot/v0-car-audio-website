@@ -9,7 +9,6 @@ const galleryImages = [
   { src: "/images/gallery-3.jpg", alt: "Amplifier installation", category: "Audio" },
   { src: "/images/gallery-4.jpg", alt: "Remote start system", category: "Security" },
   { src: "/images/gallery-5.jpg", alt: "Component speaker install", category: "Audio" },
-  { src: "/images/gallery-6.jpg", alt: "Custom trunk build", category: "Custom" },
 ]
 
 export function GallerySection() {
@@ -33,7 +32,7 @@ export function GallerySection() {
             <div
               key={image.src}
               className={`group relative overflow-hidden rounded-lg cursor-pointer ${
-                index === 0 || index === 5 ? "md:col-span-2 md:row-span-2 aspect-square md:aspect-auto" : "aspect-square"
+                index === 0 ? "md:col-span-2 md:row-span-2 aspect-square md:aspect-auto" : "aspect-square"
               }`}
             >
               <Image

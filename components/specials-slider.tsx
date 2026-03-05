@@ -48,6 +48,33 @@ const specials = [
     image: "/images/special-carplay.jpg",
     validUntil: "This Month Only",
   },
+  {
+    id: 5,
+    title: "Mechanic Services",
+    subtitle: "Oil Change Special",
+    description: "Keep your engine running smooth with our professional oil change service. Quick and affordable.",
+    discount: "Service Special",
+    image: "/images/special-oil-change.jpg",
+    validUntil: "Always Available",
+  },
+  {
+    id: 6,
+    title: "Brake Service",
+    subtitle: "Brake Pads & Rotors",
+    description: "Full brake inspection and replacement. Keep your family safe on the road.",
+    discount: "Safety First",
+    image: "/images/special-brakes.jpg",
+    validUntil: "Call for Quote",
+  },
+  {
+    id: 7,
+    title: "Engine Repair",
+    subtitle: "Diagnostics & Repair",
+    description: "Full engine diagnostics, repair, and headers replacement. We fix it right the first time.",
+    discount: "Expert Service",
+    image: "/images/special-engine.jpg",
+    validUntil: "Call for Quote",
+  },
 ]
 
 export function SpecialsSlider() {
