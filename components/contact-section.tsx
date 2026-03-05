@@ -51,8 +51,8 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Email</h4>
-                  <a href="mailto:info@fordhamauto.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    info@fordhamauto.com
+                  <a href="mailto:topnotchautoaudio@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    topnotchautoaudio@gmail.com
                   </a>
                 </div>
               </div>

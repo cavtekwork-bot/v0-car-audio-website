@@ -53,7 +53,6 @@ export function Footer() {
           <div>
             <h4 className="font-serif font-semibold text-foreground mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">About Us</Link></li>
               <li><Link href="#gallery" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Gallery</Link></li>
               <li><Link href="#products" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Products</Link></li>
               <li><Link href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Contact</Link></li>
@@ -68,7 +67,7 @@ export function Footer() {
               <li>2514 Hoffman Road</li>
               <li>Bronx, NY 10458</li>
               <li><a href="tel:+17185551234" className="hover:text-foreground transition-colors">(718) 555-1234</a></li>
-              <li><a href="mailto:info@topnotchauto.com" className="hover:text-foreground transition-colors">info@topnotchauto.com</a></li>
+              <li><a href="mailto:topnotchautoaudio@gmail.com" className="hover:text-foreground transition-colors">topnotchautoaudio@gmail.com</a></li>
             </ul>
           </div>
         </div>

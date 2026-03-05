@@ -11,28 +11,16 @@ const services = [
     features: ["Component Speakers", "Subwoofers", "Amplifiers", "Head Units"],
   },
   {
-    icon: Shield,
-    title: "Security & Alarms",
-    description: "Protect your investment with state-of-the-art car alarm systems and theft deterrents.",
-    features: ["Car Alarms", "Kill Switches", "GPS Tracking", "Smart Alerts"],
-  },
-  {
-    icon: Smartphone,
-    title: "Remote Starters",
-    description: "Start your car from anywhere with advanced remote start systems. Perfect for any weather.",
-    features: ["2-Way Remotes", "Smartphone Control", "Climate Control", "Long Range"],
-  },
-  {
-    icon: Radio,
-    title: "Apple CarPlay & Android Auto",
-    description: "Upgrade your dash with seamless smartphone integration for navigation, music, and calls.",
-    features: ["Wireless CarPlay", "Android Auto", "Screen Mirroring", "USB Integration"],
-  },
-  {
     icon: Wrench,
     title: "Engine Repair",
     description: "Full engine diagnostics and repair services. We keep your vehicle running smoothly.",
     features: ["Diagnostics", "Engine Repair", "Headers Replacement", "Tune-Ups"],
+  },
+  {
+    icon: Shield,
+    title: "Security & Alarms",
+    description: "Protect your investment with state-of-the-art car alarm systems and theft deterrents.",
+    features: ["Car Alarms", "Kill Switches", "GPS Tracking", "Smart Alerts"],
   },
   {
     icon: Car,
@@ -41,10 +29,22 @@ const services = [
     features: ["Oil Changes", "Fluid Top-Offs", "Filter Replacement", "Inspections"],
   },
   {
+    icon: Smartphone,
+    title: "Remote Starters",
+    description: "Start your car from anywhere with advanced remote start systems. Perfect for any weather.",
+    features: ["2-Way Remotes", "Smartphone Control", "Climate Control", "Long Range"],
+  },
+  {
     icon: Disc,
     title: "Brake Services",
     description: "Complete brake repair and replacement. Keep your family safe on the road.",
     features: ["Brake Pads", "Rotors", "Brake Fluid", "Full Inspection"],
+  },
+  {
+    icon: Radio,
+    title: "Apple CarPlay & Android Auto",
+    description: "Upgrade your dash with seamless smartphone integration for navigation, music, and calls.",
+    features: ["Wireless CarPlay", "Android Auto", "Screen Mirroring", "USB Integration"],
   },
   {
     icon: Battery,

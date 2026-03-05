@@ -44,20 +44,11 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="mt-6 grid grid-cols-3 gap-4 max-w-sm mx-auto">
-              <div>
-                <p className="font-serif text-2xl md:text-3xl font-bold text-primary">15+</p>
-                <p className="text-xs text-muted-foreground mt-1">Years Experience</p>
-              </div>
-              <div>
-                <p className="font-serif text-2xl md:text-3xl font-bold text-primary">5K+</p>
-                <p className="text-xs text-muted-foreground mt-1">Happy Customers</p>
-              </div>
-              <div>
-                <p className="font-serif text-2xl md:text-3xl font-bold text-primary">100%</p>
-                <p className="text-xs text-muted-foreground mt-1">Satisfaction</p>
-              </div>
+            {/* Tagline */}
+            <div className="mt-6 max-w-lg mx-auto">
+              <p className="text-base md:text-lg font-medium text-primary text-center">
+                Your All-In-One Stop Shop for Audio, Electrical, Mechanical Repairs & Upgrades
+              </p>
             </div>
           </div>
 
