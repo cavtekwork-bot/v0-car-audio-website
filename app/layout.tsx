@@ -8,7 +8,7 @@ const _inter = Inter({ subsets: ["latin"] });
 const _oswald = Oswald({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
-  title: 'Fordham Auto and Security | Premium Car Audio Installation in the Bronx',
+  title: 'Top Notch Auto Audio and Security | Premium Car Audio Installation in the Bronx',
   description: 'Transform your ride with premium car audio systems, subwoofers, amplifiers, and security upgrades. Professional installation in the Bronx, NY.',
   generator: 'v0.app',
   icons: {
