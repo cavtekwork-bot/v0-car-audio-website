@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { Phone } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -33,14 +33,13 @@ export function HeroSection() {
               Professional service by experienced technicians.
             </p>
             
-            {/* CTA Buttons */}
-            <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8">
-                View Our Services
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-secondary text-base px-8 bg-transparent">
-                Get Free Quote
+            {/* CTA Button */}
+            <div className="mt-6 flex justify-center">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8" asChild>
+                <a href="tel:7183645070">
+                  <Phone className="mr-2 w-4 h-4" />
+                  Call for a Quote
+                </a>
               </Button>
             </div>
 

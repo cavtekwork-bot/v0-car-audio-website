@@ -4,11 +4,24 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
-// Modern minimalist sports car icon
+// Sleek minimalist sports coupe with wind lines
 function SportsCarIcon({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 64 32" fill="currentColor" className={className}>
-      <path d="M58 20h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2h-1c0 2.2-1.8 4-4 4s-4-1.8-4-4H13c0 2.2-1.8 4-4 4s-4-1.8-4-4H2c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2l4-6c1.5-2.3 4-4 7-4h10l8-4c1-.5 2.1-.5 3 0l12 6c2 1 4 3 5 5l7 2v3zM9 28c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zm46 0c1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3 1.3 3 3 3zM12 14H8l-2 4h8l-2-4zm6-4v8h12v-8H18zm14 0v8h10l-4-6-6-2z" />
+    <svg viewBox="0 0 80 32" fill="currentColor" className={className}>
+      {/* Wind/motion lines */}
+      <rect x="0" y="14" width="12" height="1.5" rx="0.75" opacity="0.4" />
+      <rect x="2" y="18" width="8" height="1.5" rx="0.75" opacity="0.25" />
+      <rect x="4" y="22" width="6" height="1.5" rx="0.75" opacity="0.15" />
+      {/* Sleek coupe body */}
+      <path d="M20 24c0-1.5 1.2-2.7 2.7-2.7h1.6c1.5 0 2.7 1.2 2.7 2.7M53 24c0-1.5 1.2-2.7 2.7-2.7h1.6c1.5 0 2.7 1.2 2.7 2.7" />
+      <path d="M18 22h46c2 0 3-1 3-2v-1c0-1-0.5-2-1.5-2.5L60 14l-6-4c-1-0.7-2.2-1-3.4-1H36c-2 0-4 0.8-5.4 2.2L26 16l-6 1.5c-1.5 0.4-2.5 1.5-2.5 3v0.5c0 0.6 0.2 1 0.5 1z" />
+      {/* Windows */}
+      <path d="M32 12.5l3.5-2.5h12l4 3.5v4h-19.5v-5z" fillOpacity="0.3" />
+      {/* Wheels */}
+      <circle cx="25" cy="24" r="4" />
+      <circle cx="25" cy="24" r="2" fillOpacity="0.3" />
+      <circle cx="57" cy="24" r="4" />
+      <circle cx="57" cy="24" r="2" fillOpacity="0.3" />
     </svg>
   )
 }
@@ -29,7 +42,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <SportsCarIcon className="w-12 h-6 text-primary" />
+            <SportsCarIcon className="w-14 h-7 text-primary" />
             <div className="hidden sm:block">
               <span className="font-serif font-bold text-xl tracking-wide text-foreground">TOP NOTCH</span>
               <span className="block text-[10px] tracking-[0.2em] text-primary uppercase font-semibold">Auto Audio & Security</span>
