@@ -24,9 +24,9 @@ export function Header() {
             <Image 
               src="/images/logo.png"
               alt="Top Notch Auto Audio & Security"
-              width={200}
-              height={80}
-              className="h-12 md:h-16 w-auto"
+              width={280}
+              height={100}
+              className="h-14 md:h-[70px] w-auto"
               priority
             />
           </Link>
