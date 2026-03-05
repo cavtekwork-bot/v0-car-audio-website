@@ -224,6 +224,9 @@ export function ProductsSection() {
               <ProductCard key={product.name} product={product} />
             ))}
           </div>
+          <p className="text-center mt-6 text-muted-foreground">
+            And more! <a href="tel:7183645070" className="text-primary font-semibold hover:text-primary/80">Call for more options</a>
+          </p>
         </div>
 
         {/* Motor Oils */}
@@ -235,6 +238,9 @@ export function ProductsSection() {
               <ProductCard key={product.name} product={product} />
             ))}
           </div>
+          <p className="text-center mt-6 text-muted-foreground">
+            And more! <a href="tel:7183645070" className="text-primary font-semibold hover:text-primary/80">Call for more options</a>
+          </p>
         </div>
 
         {/* Brake Pads */}
